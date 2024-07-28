@@ -57,9 +57,92 @@ Set up a two VMs, Client-1 Windows VM and DC-1 Windows Server
 <br />
 
 <p>
-<img src="" height="80%" width="80%""/>
+<img src="https://github.com/user-attachments/assets/44bd8b6d-455f-4082-9fc2-42b09b31995d" height="80%" width="80%""/>
+<img src="https://github.com/user-attachments/assets/530f6a8d-732f-420c-9885-a92bb90b7d41" height="80%" width="80%""/>
+
+
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Changed the ipconfig from dynamic to static meaning my DC-1 ip address will never change.
+</p>
+<br />
+
+<p>
+  <img src="https://github.com/user-attachments/assets/300c80a6-51ce-49fd-8647-be67e765553f" height="80%" width="80%""/>
+  <img src="https://github.com/user-attachments/assets/17ccb149-1dc0-4ada-b4b4-a00573ed5ad2" height="80%" width="80%""/>
+</p>
+
+<p>
+  Using RDP to connect to Client-1 VM. By using command prompt ping -t 10.0.0.4 to ping DC-1 Private IP address and check for connectivity or/and error msgs.
+</p>
+<br />
+
+
+<p>
+<img src="https://github.com/user-attachments/assets/07a1ce18-286c-49e7-92db-a4ad7c0844ca" height=80%" width="80%""/> 
+  <img src="https://github.com/user-attachments/assets/0abf3f4b-8412-4b5c-a531-d671107020df" height=80%" width="80%""/>
+  
+
+</p>
+ 
+  
+<p>
+Login into DC-1 Windows Server by RDP and enabling Windows Defender Firewall w/ Advanced Security to inbound rule on icmpv4, which both of my VMs have so I'm able to
+  allow network traffic to enter both of my VMs.
+</p>
+
+<br />
+
+<p>
+  <img src="https://github.com/user-attachments/assets/a00bd70f-abfd-4694-9c9f-6d1c0ab5bfb3" height="80%" width="80%""/>
+  <img src="https://github.com/user-attachments/assets/a5f2f4a0-40ef-4592-a728-c31869e34000" height="80%" width=80%""/>
+  
+  
+</p>
+<p>
+  Adding roles and features by installing new Active Directory Domain Service and setting up a new forest (domain name) called MYCYBERCAT.COM.
+  Able to restart and log back into DC-1 as user mycybercat.com\___
+  
+</p>
+<br />
+
+<p>
+  <img src="https://github.com/user-attachments/assets/8778348e-9ef4-47af-b3fb-531d80fde6c6" height="80%" width="80%""/>
+  <img src="https://github.com/user-attachments/assets/6da7b926-0155-4592-a1e2-9abb886e6886" height="80%" width="80%""/>
+
+
+</p>
+<p>
+  In my Active Directory for Users and Computers, I was able to create two Orgnizational Units (OUs) EMPLOYEES and ADMINS.
+</p>
+<br />
+
+<p>
+  <img src="https://github.com/user-attachments/assets/6dff1d89-d18e-4029-ad3c-6cc3e9b59b2e" height="80%" width="80%""/>
+   <img src="https://github.com/user-attachments/assets/f5c60acd-6dba-4871-8170-a55c7bdf4760" height="80%" width="80%""/>
+  <img src="https://github.com/user-attachments/assets/af63f3a7-6f44-483e-9095-4bb4b3d74bea" height="80%" width="80%""/>
+   <img src="" height="80%" width="80%""/>
+   <img src="" height="80%" width="80%""/>
+  
+
+
+
+  
+</p>
+<p>
+  Able to create TWO ADMINS named Julie Doe and Michael Wayne. Logged into Julie Doe's account and able to command prompt to identify whoami.
+
+</p>
+<br />
+
+<p>
+   <img src="https://github.com/user-attachments/assets/7d083467-94ac-43fc-a17e-540cf5f2f4ad" height="80%" width="80%""/>
+    <img src="https://github.com/user-attachments/assets/fc10744c-7b56-4cd7-8084-f1b3f0a10bbb" height="80%" width="80%""/>
+   <img src=" https://github.com/user-attachments/assets/7ade219e-3bc9-4da0-81f8-4afbcbf70a96" height="80%" width="80%""/>
+  <img src="https://github.com/user-attachments/assets/22f2f023-1186-4e8f-9a8a-15616e66f7d7" height="" width="" />
+</p>
+
+<p>
+  on CL-1, I was unable to use MYCYBERCAT domain due to an error. So I went back into the DNS server and customed my private IP address to be similar to DC-1's private IP address.
 </p>
 <br />
