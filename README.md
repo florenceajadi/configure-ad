@@ -1,10 +1,6 @@
 <p align="center">
 <img src="https://i.imgur.com/pU5A58S.png" alt="Microsoft Active Directory Logo"/>
 </p>
-<img src="" height="80%" width="80%""/>
-<img src="" height="80%" width="80%""/>
-<img src="" height="80%" width="80%""/>
-<img src="" height="80%" width="80%""/>
 
 <h1>On-premises Active Directory Deployed in the Cloud (Azure)</h1>
 This tutorial outlines the implementation of on-premises Active Directory within Azure Virtual Machines.<br />
@@ -12,7 +8,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 <h2>Video Demonstration</h2>
 
-- ### [YouTube: How to Deploy on-premises Active Directory within Azure Compute](https://www.youtube.com)
+- ### [YouTube: How to Deploy on-premises Active Directory within Azure Compute](https://youtu.be/cG7M3Z-Cek4)
 
 <h2>Environments and Technologies Used</h2>
 
@@ -33,7 +29,8 @@ This tutorial outlines the implementation of on-premises Active Directory within
 - Installing Active Directory
 - Creating an Admin and Normal User account in AD
 - Join Client-1 to your domain
-- Step 4
+- Setup Remote Desktop (RDP) for non-admin users on Client-1
+- Create a bunch of additional users and attempt to log into Client-1 with one of the users
 
 <h2>Deployment and Configuration Steps</h2>
 
@@ -121,28 +118,60 @@ Login into DC-1 Windows Server by RDP and enabling Windows Defender Firewall w/ 
   <img src="https://github.com/user-attachments/assets/6dff1d89-d18e-4029-ad3c-6cc3e9b59b2e" height="80%" width="80%""/>
    <img src="https://github.com/user-attachments/assets/f5c60acd-6dba-4871-8170-a55c7bdf4760" height="80%" width="80%""/>
   <img src="https://github.com/user-attachments/assets/af63f3a7-6f44-483e-9095-4bb4b3d74bea" height="80%" width="80%""/>
-   <img src="" height="80%" width="80%""/>
-   <img src="" height="80%" width="80%""/>
-  
-
-
-
   
 </p>
 <p>
   Able to create TWO ADMINS named Julie Doe and Michael Wayne. Logged into Julie Doe's account and able to command prompt to identify whoami.
-
 </p>
 <br />
 
 <p>
    <img src="https://github.com/user-attachments/assets/7d083467-94ac-43fc-a17e-540cf5f2f4ad" height="80%" width="80%""/>
-    <img src="https://github.com/user-attachments/assets/fc10744c-7b56-4cd7-8084-f1b3f0a10bbb" height="80%" width="80%""/>
+    <img src="https://github.com/user-attachments/assets/fc10744c-7b56-4cd7-8084-f1b3f0a10bbb" height="80%" width="80%"/>
    <img src=" https://github.com/user-attachments/assets/7ade219e-3bc9-4da0-81f8-4afbcbf70a96" height="80%" width="80%""/>
-  <img src="https://github.com/user-attachments/assets/22f2f023-1186-4e8f-9a8a-15616e66f7d7" height="" width="" />
+  <img src="https://github.com/user-attachments/assets/22f2f023-1186-4e8f-9a8a-15616e66f7d7" height="80%" width="80%""/>
 </p>
 
 <p>
   on CL-1, I was unable to use MYCYBERCAT domain due to an error. So I went back into the DNS server and customed my private IP address to be similar to DC-1's private IP address.
 </p>
+<br/>
+
+<p>
+  <img src="https://github.com/user-attachments/assets/bc9542b8-4967-4d6b-a07b-dc09464a4266" height="80%" width="80%""/>
+<p>
+  <p>
+ Now it works! 😊
+</p>
 <br />
+
+<p>
+  <img src="https://github.com/user-attachments/assets/decfc011-2092-4730-bbfd-99ef3195a259" height="80%" width="80%" />
+  <img src="https://github.com/user-attachments/assets/f5df04e4-5dbe-4422-8bef-653a9b01fbed" height="80%" width="80%" />
+
+</p>
+
+<p>
+  Now able to allow "Domain users" (anyone with MYCYBERCAT domain) to remote desktop.
+</p>
+<br />
+
+<p>
+  <img src="https://github.com/user-attachments/assets/1e05b35b-ac51-4ea0-a0ca-7f3180f34474" height="80%" width="80%" />
+</p>
+<p>
+  Able to create a lot of users by running scripts in PowerShell ISE as an Administrator. 
+</p>
+
+<p>
+  <img src="https://github.com/user-attachments/assets/7866637b-c5d0-4d05-a75e-ecfcfaa21d31" height="80%" width="80%" />
+
+  <img src="https://github.com/user-attachments/assets/b8aa9c8b-e710-49b8-950f-d28f59f63f89" height="80%" width="80%" />
+
+</p>
+<p>
+  Now able to log into the employee BOB TUSE account that was created through scripting.
+</p>
+<br />
+
+
